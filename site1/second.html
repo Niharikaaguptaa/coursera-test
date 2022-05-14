@@ -1,169 +1,217 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-
-<title>Module 3</title>
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Module 3 Solution</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+  <style>
+    body {
+  font-size: 16px;
+  color: rgba(34, 33, 33, 0.884);
+  background-color: #80bad1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
 
+#header-nav {
+  background-color: #6f44a0;
+  border-radius: 0;
+  border: 0;
+  min-height: 70px;
+}
+
+.navbar-brand h1 {
+  font-family: 'Lora', serif;
+  color: #80bad1;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#nav-list a {
+  color: #80bad1;
+  font-weight: bold;
+}
+
+#nav-list a:hover {
+  background: rgb(236, 236, 209);
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #80bad1;
+}
+
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+
+#page-title {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#main-text {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.text-background {
+  height: 3000px;
+  padding: 20px 40px 20px 40px;
+  background-color: rgb(236, 236, 209);
+  overflow: hidden;
+}
+
+h3 {
+  font-weight: bold;
+}
+  </style>
 </head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-
-  .container-fluid{
-  margin: 0;
-  padding: 0;
-}
-
-.navbar{
-  border-radius: 0px;
-  background-color: rgba(0,0,0,0.8);
-}
-
-.navbar-brand{
-  font-size: 35px;
-  color: white;
-  padding-left: 25px;
-}
-
-.navbar-brand:hover{
-  color: white;
-}
-
-.nav{
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-nav{
-  font-size: 25px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-toggle{
-  border: 2px solid white;
-  margin-right: 25px;
-}
-
-.icon-bar{
-  background-color: white;
-}
-
-
-.main-title{
-  margin-bottom: 15px;
-  text-align: center;
-  color: #ff4532;
-  font-size: 50px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  font-weight: bold;
-}
-
-li{
-  box-sizing: border-box;
-  width: 100%;
-}
-
-.menu-item{
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  background-color: white;
-  border-bottom: 1px solid black;
-  color: black;
-  display: block;
-}
-
-.menu-item:hover{
-  background-color: rgba(0,0,0,0.9);
-  color: rgba(0,0,0,0.4);
-}
-
-
-
-.row{
-  margin: 20px;
-}
-
-.content-box{
-  margin: 20px;
-  width: auto;
-  height: auto;
-  color: black;
-  background-color: rgba(0,0,0,0.2);
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  padding: 20px;
-}
-
-.item-name{
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#top{
-
-}
-</style>
-
 <body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <a href="index.html">
+              <h1>Food, LLC</h1>
+            </a>
+          </div>
 
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav"
+           aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-<nav class="navbar" id="top">
-  <div class="container-fluid">
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav visible-xs">
+            <li><a href="#chicken" class="text-center">Chicken</a></li>
+            <li><a href="#beef" class="text-center">Beef</a></li>
+            <li><a href="#sushi" class="text-center">Sushi</a></li>
+          </ul>
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <a class="navbar-brand" href="#">Food, LLC</a>
-    </div>
-
-    <div class="collapse" id="myNavbar">
-      <ul class="nav navbar-nav visible-xs">
-        <li><a class="menu-item" href="#">Chicken</a></li>
-        <li><a class="menu-item" href="#">Beef</a></li> 
-        <li><a class="menu-item" href="#">Sushi</a></li> 
-      </ul>
-    </div>
-
+  <div id="main-content" class="container">
+    <h2 id="page-title" class="text-center">Our Menu</h2>
+    <section class="row">
+      <div id="main-text" class="col-xs-12">
+        <div class="text-background">
+          <h3 id="chicken">Chicken</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean
+            massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec
+            quam
+            felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            Donec
+            pede
+            justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
+            a,venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+            dapibus.Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+            porttitor
+            eu,
+            consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+            tellus.Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+            ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+            Maecenas
+            tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit adipiscing sem neque sed
+            ipsum.
+            Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+            tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget
+            eros
+            faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+            Sed
+            consequat, leo eget bibendum sodales, augue velit cursus nunc.
+          </p>
+          <h3 id="beef">Beef</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean
+            massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec
+            quam
+            felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            Donec
+            pede
+            justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
+            a,venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+            dapibus.Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+            porttitor
+            eu,
+            consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+            tellus.Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+            ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+            Maecenas
+            tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit adipiscing sem neque sed
+            ipsum.
+            Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+            tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget
+            eros
+            faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+            Sed
+            consequat, leo eget bibendum sodales, augue velit cursus nunc.
+          </p>
+          <h3 id="sushi">Sushi</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean
+            massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec
+            quam
+            felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            Donec
+            pede
+            justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
+            a,venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
+            dapibus.Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+            porttitor
+            eu,
+            consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+            tellus.Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+            ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+            Maecenas
+            tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit adipiscing sem neque sed
+            ipsum.
+            Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+            tincidunt
+            tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci
+            eget
+            eros
+            faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+            Sed
+            consequat, leo eget bibendum sodales, augue velit cursus nunc.
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
-</nav>
 
-<h1 class="main-title">Our Menu</h1>
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
 
-
-
-<div class="row">
-
-  <div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="content-box">
-      <p class="item-name">Chicken</p>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#top">(Back to Top)</a></p>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6 col-sm-12">
-    <div class="content-box">
-      <p class="item-name">Beef</p>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#top">(Back to Top)</a></p>
-    </div>
-  </div>
-
-
-  <div class="col-lg-4 col-md-12 col-sm-12">
-    <div class="content-box">
-      <p class="item-name">Sushi</p>
-     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#top">(Back to Top)</a></p>
+</html>tuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#top">(Back to Top)</a></p>
     </div>
   </div>
 
